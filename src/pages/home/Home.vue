@@ -1,22 +1,23 @@
 <template>
-  <div class="hello">
-   {{ msg }} 
-   </div>
-   
-</template>
+  <div>
+    hello world {{msg}}
 
+  </div>
+  
+</template>
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   data () {
     return {
-      msg: '马壮不是废柴，马壮一样可以自己在vue上做的很棒'
+      msg: '首页'
     }
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  /* .home{
+    font-size:50px;
+  } */
 </style>
