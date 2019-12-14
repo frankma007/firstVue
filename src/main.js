@@ -6,7 +6,14 @@ import router from './router'
 import 'styles/reset.css'
 import 'styles/border.css' 
 import 'styles/iconfont.css'
-import fastclick from 'fastclick' 
+import fastclick from 'fastclick'
+//引入vue-awesome-swiper轮播图插件
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
+// require styles轮播图样式
+import 'swiper/dist/css/swiper.css'
+//使用插件 可以跟默认参数 
+Vue.use(VueAwesomeSwiper, /* { default global options } */)
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
