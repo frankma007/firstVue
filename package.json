@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
-    "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "lint": "eslint --ext .js --ext .jsx --ext .vue client/,.vue src",
+    "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue client/",
+    "build": "node build/build.js",
+    "format": "onchange 'test/**/*.js' 'src/**/*.js' 'src/**/*.vue' -- prettier --write {{changed}}"
   },
   "dependencies": {
     "fastclick": "^1.0.6",
@@ -19,6 +21,7 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/eslint-config-prettier": "^6.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
@@ -38,8 +41,9 @@
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-standard": "^3.1.0",
     "eslint-plugin-vue": "^4.0.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
