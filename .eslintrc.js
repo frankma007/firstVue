@@ -9,7 +9,8 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     'plugin:prettier/recommended',
-    'standard',//使用standard做代码规范,      
+    'standard',//使用standard做代码规范,  
+    'prettier'    
   ],
   // required to lint *.vue files
   plugins: [
