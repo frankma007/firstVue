@@ -1,29 +1,13 @@
 <template>
   <div>
     <div class="icons">
-      <swiper>
-        <swiper-slide
-          :options="swiperOption"
-          v-for="(pageList, index) of pages"
-          :key="index"
-        >
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="(pageList, index) of pages" :key="index">
           <div class="icon" v-for="item of pageList" :key="item.id">
             <div class="icon-img">
               <img class="icon-img-content" :src="item.imgUrl" alt="" />
             </div>
             <p class="icon-desc">{{ item.desc }}</p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="icon">
-            <div class="icon-img">
-              <img
-                class="icon-img-content"
-                src="https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png"
-                alt=""
-              />
-            </div>
-            <p class="icon-desc">景点门票</p>
           </div>
         </swiper-slide>
       </swiper>
@@ -33,74 +17,21 @@
 <script>
 export default {
   name: "HomeIcon",
+  props: {
+    list: Array
+  },
   data: function() {
     return {
       swiperOption: {
-        pagination: ".swiper-pagination",
+        // pagination: ".swiper-pagination",
         autoplay: false
-      },
-      iconList: [
-        {
-          id: "001",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "002",
-          imgUrl:
-            "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3ef092d0a89ffddb7f781cda30c8ae49.png",
-          desc: "滑雪季"
-        },
-        {
-          id: "003",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/ea/01d081dacb03cc02.png",
-          desc: "赏秋色"
-        },
-        {
-          id: "004",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-          desc: "一日游"
-        },
-        {
-          id: "005",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "006",
-          imgUrl:
-            "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3ef092d0a89ffddb7f781cda30c8ae49.png",
-          desc: "滑雪季"
-        },
-        {
-          id: "007",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1803/ea/01d081dacb03cc02.png",
-          desc: "赏秋色"
-        },
-        {
-          id: "008",
-          imgUrl:
-            "https://imgs.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-          desc: "一日游"
-        },
-        {
-          id: "009",
-          imgUrl:
-            "https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/3ef092d0a89ffddb7f781cda30c8ae49.png",
-          desc: "动植物园动植物园动植物园动植物园动植物园"
-        }
-      ]
+      }
     };
   },
   computed: {
     pages() {
       const pages = [];
-      this.iconList.forEach((item, index) => {
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8);
         if (!pages[page]) {
           pages[page] = [];

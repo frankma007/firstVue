@@ -5,13 +5,16 @@
       <i class="iconfont ">&#xe648;</i>输入城市景点游玩主题
     </div>
     <div class="header-right">
-      城市<i class="iconfont arrow-icon">&#xe662;</i>
+      {{ this.city }}<i class="iconfont arrow-icon">&#xe662;</i>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeHeader'
+  name: "HomeHeader",
+  props: {
+    city: String
+  }
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
