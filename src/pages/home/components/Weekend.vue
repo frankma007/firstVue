@@ -27,36 +27,6 @@ export default {
   name: "HomeWeekend",
   props: {
     list: Array
-  },
-  data: function() {
-    return {
-      // recommendList: [
-      //   {
-      //     id: "001",
-      //     imgUrl:
-      //       "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-      //     title: "上海欢乐谷",
-      //     desc:
-      //       "景点浦江郊野公园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园奇迹花园门票"
-      //   },
-      //   {
-      //     id: "002",
-      //     imgUrl:
-      //       "https://imgs.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-      //     title: "上海欢乐谷2",
-      //     desc:
-      //       "2景点浦江郊野公园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园奇迹花园门票"
-      //   },
-      //   {
-      //     id: "003",
-      //     imgUrl:
-      //       "https://imgs.qunarzz.com/sight/p0/1804/a7/a78d5d7a31a55d9ba3.img.jpg_200x200_4ebba6b4.jpg",
-      //     title: "上海欢乐谷3",
-      //     desc:
-      //       "3景点浦江郊野公园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园浦江郊野公园奇迹花园奇迹花园门票"
-      //   }
-      // ]
-    };
   }
 };
 </script>
