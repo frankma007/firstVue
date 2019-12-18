@@ -8,12 +8,12 @@
   </div>
 </template>
 <script>
-import axios from "axios";
-import HomeHeader from "./components/Header.vue";
-import HomeSwiper from "./components/Swiper.vue";
-import HomeIcon from "./components/Icon.vue";
-import HomeRecommend from "./components/Recommend.vue";
-import HomeWeekend from "./components/Weekend.vue";
+import axios from "axios"
+import HomeHeader from "./components/Header.vue"
+import HomeSwiper from "./components/Swiper.vue"
+import HomeIcon from "./components/Icon.vue"
+import HomeRecommend from "./components/Recommend.vue"
+import HomeWeekend from "./components/Weekend.vue"
 export default {
   name: "Home",
   data: function() {
@@ -23,7 +23,7 @@ export default {
       iconList: [],
       recommendList: [],
       weekendList: []
-    };
+    }
   },
   components: {
     HomeHeader,
@@ -34,20 +34,19 @@ export default {
   },
   methods: {
     getHomeInfo() {
-      axios.get("/api/index.json").then(this.getHomeInfoSucc);
+      axios.get("/api/index.json").then(this.getHomeInfoSucc)
     },
-    getHomeInfoSucc(res) {
-      console.log(res);
-      this.city = res.data.data.city;
-      this.swiperList = res.data.data.swiperList;
-      this.iconList = res.data.data.iconList;
-      this.recommendList = res.data.data.recommendList;
-      this.weekendList = res.data.data.weekendList;
+    getHomeInfoSucc(res) {     
+      this.city = res.data.data.city
+      this.swiperList = res.data.data.swiperList
+      this.iconList = res.data.data.iconList
+      this.recommendList = res.data.data.recommendList
+      this.weekendList = res.data.data.weekendList
     }
   },
   mounted() {
-    this.getHomeInfo();
+    this.getHomeInfo()
   }
-};
+}
 </script>
 <style scoped></style>
