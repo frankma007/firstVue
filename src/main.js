@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App.vue'
+import store from './store/index.js'
 import router from './router'
 import 'styles/reset.css'
 import 'styles/border.css'
@@ -19,6 +20,7 @@ fastclick.attach(document.body)
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
