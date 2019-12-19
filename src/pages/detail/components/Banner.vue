@@ -1,32 +1,34 @@
 <template>
   <div>
     <div class="banner" v-on:click="handleBannerClick">
-      <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_600x330_8572a930.jpg" alt="">
+      <img class="banner-img" :src="img" alt="">
       <div class="banner-info">
         <div class="banner-tittle">
-          上海迪士尼乐园
+          {{name}}
         </div>
         <div class="banner-number">
-          <i class="iconfont banner-icon">&#xe63b;</i>39
+          <i class="iconfont banner-icon">&#xe63b;</i>{{imgList.length}}
         </div>
       </div>
     </div>
-    <common-gallary v-on:close="handleGallaryClose" :imgs="imgs" v-show="showGallary"></common-gallary>
+    <common-gallary v-on:close="handleGallaryClose" :imgs="imgList" v-show="showGallary"></common-gallary>
   </div>
 </template>
 <script>
 import CommonGallary from 'common/gallary/Gallary.vue'
 	export default {
-    name: "Banner",	
+    name: "Banner",
+    props:{
+      name:String,
+      img:String,
+      imgList:Array
+    },
     components:{
       CommonGallary
     },
     data:function(){
       return{
-        imgs:[
-            'http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_r_800x800_d6a63068.jpg',
-            'http://img1.qunarzz.com/sight/p0/1908/53/5339e93a25e221a2a3.img.jpg_r_800x800_f807e948.jpg'
-          ],
+        // imgs:[],
         showGallary:false
       }
     },
