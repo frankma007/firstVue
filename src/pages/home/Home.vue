@@ -10,7 +10,7 @@
 <script>
 import {mapState} from 'vuex'
 import axios from "axios"
-import HomeHeader from "./components/Header.vue"
+// import HomeHeader from "./components/Header.vue"
 import HomeSwiper from "./components/Swiper.vue"
 import HomeIcon from "./components/Icon.vue"
 import HomeRecommend from "./components/Recommend.vue"
@@ -27,7 +27,8 @@ export default {
     }
   },
   components: {
-    HomeHeader,
+    //异步加载header组件
+    HomeHeader:()=>import('./components/Header.vue'),
     HomeSwiper,
     HomeIcon,
     HomeRecommend,

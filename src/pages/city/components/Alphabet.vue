@@ -5,7 +5,7 @@
       v-for="alpha of letters"
       :key="alpha"
       @click="handleLetterClick"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
       :ref="alpha"

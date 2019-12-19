@@ -18,8 +18,7 @@
           </p>
         </div>
       </li>
-    </ul>
-    recommend
+    </ul>    
   </div>
 </template>
 <script>

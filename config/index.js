@@ -11,10 +11,10 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      "/api":{
-        target:'http://localhost:8080',        
-        pathRewrite:{
-          "^/api":"/static/mock"
+      "/api": {
+        target: 'http://localhost:8080',
+        pathRewrite: {
+          "^/api": "/static/mock"
         }
       }
     },
@@ -57,6 +57,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    //对应域名下存放的路径默认为根路径“/”,可以是“/test”文件夹下，生成的路径就是后端项目的/test文件下
     assetsPublicPath: './',
 
     /**

@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store/index.js'
 import router from './router'
+import "babel-polyfill";
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
