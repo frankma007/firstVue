@@ -21,6 +21,11 @@ export default new Router({
       path: "/detail/:id",
       name: "Detail",
       component: () => import('@/pages/detail/Detail.vue')
+    },
+    {
+      path: "/test",
+      name: "Test",
+      component: () => import('@/pages/test/Test.vue')
     }
   ],
   scrollBehavior (to, from, savedPosition) {
